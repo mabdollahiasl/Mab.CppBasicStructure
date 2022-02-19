@@ -53,3 +53,26 @@ It also support for each iteration.
     }
     std::cin.get();
 
+## Stack Class:
+
+it's a Stack data structure with a simple implementation.
+
+**Sample code:**
+
+    cout << "Test Stack:" << endl;
+    
+    
+    Stack<int> stack;
+    stack.Push(1);
+    stack.Push(2);
+    stack.Push(3);
+    
+    auto last = stack.Pick();  // pick return the last item which pushed to stack but not remove it
+    cout << "Last Item Picked: " << last << endl;
+    
+    while (!stack.IsEmpty())
+    {
+        cout << "Item Poped: " << stack.Pop() << endl;
+    }
+    
+    std::cin.get();
