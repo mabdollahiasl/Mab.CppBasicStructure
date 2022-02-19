@@ -4,14 +4,41 @@
 #include <iostream>
 #include "Heap.h"
 #include "Vector.h"
+#include "Stack.h"
+
 void TestHeap();
 void TestVector();
+void TestStack();
 
 int main()
 {
    
     TestHeap();
     TestVector();
+    TestStack();
+}
+
+void TestStack() {
+
+    cout << "Test Stack:" << endl;
+
+
+    Stack<int> stack;
+    stack.Push(1);
+    stack.Push(2);
+    stack.Push(3);
+
+    auto last = stack.Pick();  // pick return the last item which pushed to stack but not remove it
+    cout << "Last Item Picked: " << last << endl;
+
+    while (!stack.IsEmpty())
+    {
+        cout << "Item Poped: " << stack.Pop() << endl;
+    }
+
+    std::cin.get();
+
+
 }
 
 void TestVector() {
