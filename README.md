@@ -56,7 +56,6 @@ It also support for each iteration.
 ## Stack Class:
 
 it's a Stack data structure with a simple implementation.
-
 **Sample code:**
 
     cout << "Test Stack:" << endl;
@@ -75,4 +74,27 @@ it's a Stack data structure with a simple implementation.
         cout << "Item Poped: " << stack.Pop() << endl;
     }
     
+    std::cin.get();
+
+## Queue Class:
+
+it's a Queue data structure with a simple implementation.
+**Sample code:**
+
+    cout << "Test Queue:" << endl;
+
+
+    Queue<int> Queue;
+    Queue.Push(1);
+    Queue.Push(2);
+    Queue.Push(3);
+
+    auto last = Queue.Pick();  // pick return the last item which pushed to queue but not remove it
+    cout << "Last Item Picked: " << last << endl;
+
+    while (!Queue.IsEmpty())
+    {
+        cout << "Item Poped: " << Queue.Pop() << endl;
+    }
+
     std::cin.get();

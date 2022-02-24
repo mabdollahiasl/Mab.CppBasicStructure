@@ -5,10 +5,12 @@
 #include "Heap.h"
 #include "Vector.h"
 #include "Stack.h"
+#include "Queue.h"
 
 void TestHeap();
 void TestVector();
 void TestStack();
+void TestQueue();
 
 int main()
 {
@@ -16,6 +18,7 @@ int main()
     TestHeap();
     TestVector();
     TestStack();
+    TestQueue();
 }
 
 void TestStack() {
@@ -34,6 +37,29 @@ void TestStack() {
     while (!stack.IsEmpty())
     {
         cout << "Item Poped: " << stack.Pop() << endl;
+    }
+
+    std::cin.get();
+
+
+}
+
+void TestQueue() {
+
+    cout << "Test Queue:" << endl;
+
+
+    Queue<int> Queue;
+    Queue.Push(1);
+    Queue.Push(2);
+    Queue.Push(3);
+
+    auto last = Queue.Pick();  // pick return the last item which pushed to queue but not remove it
+    cout << "Last Item Picked: " << last << endl;
+
+    while (!Queue.IsEmpty())
+    {
+        cout << "Item Poped: " << Queue.Pop() << endl;
     }
 
     std::cin.get();
